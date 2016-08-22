@@ -1,5 +1,6 @@
 import Foundation
 import Alamofire
+import UIKit
 
 class DropboxServerTrustPolicyManager: ServerTrustPolicyManager {
     init() {

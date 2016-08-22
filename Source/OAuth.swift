@@ -192,7 +192,7 @@ class Keychain {
     }
 }
 
-class Reachability {
+class DropboxReachability {
     /// From http://stackoverflow.com/questions/25623272/how-to-use-scnetworkreachability-in-swift/25623647#25623647.
     ///
     /// This method uses `SCNetworkReachabilityCreateWithAddress` to create a reference to monitor the example host
@@ -350,7 +350,7 @@ public class DropboxAuthManager {
     /// - parameter controller: The controller to present from
     ///
     public func authorizeFromController(controller: UIViewController) {
-        if !Reachability.connectedToNetwork() {
+        if !DropboxReachability.connectedToNetwork() {
             let message = "Try again once you have an internet connection"
             let alertController = UIAlertController(title: "No internet connection", message: message, preferredStyle: .Alert)
 
